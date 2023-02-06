@@ -6,7 +6,6 @@ export const ContextProvider = ({ children }) => {
 
   const [menuState, setMenuState] = useState(false)
 
-
     return (
     <Context.Provider
     value= {{
