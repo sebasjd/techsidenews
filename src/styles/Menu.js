@@ -45,7 +45,7 @@ flex-direction: column;
 height: 100%;
 width: 350px;
 background-color: ${props=>props.bgc};
-z-index: 1;
+z-index: 2;
 color: ${props=>props.color};
 gap: 5px;
 animation: ${props=>props.menuState? OpenDesk : CloseDesk} .3s ease-in-out forwards;

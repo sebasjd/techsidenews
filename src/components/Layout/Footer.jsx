@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ColorsCtx } from '../../styles/Colors'
+import { Container } from '../../styles/Footer'
+
 
 const Footer = () => {
+  const { NoBlack } = useContext(ColorsCtx)
   return (
-    <>Footer</>
+    <>
+      <Container bgc={NoBlack}>
+
+      </Container>
+    </>
   )
 }
 

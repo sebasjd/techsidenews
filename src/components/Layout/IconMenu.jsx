@@ -5,7 +5,7 @@ import { ColorsCtx } from '../../styles/Colors'
 import { Context } from '../../utils/Context'
 
 
-const IconMenu = (props) => {
+const IconMenu = () => {
   const { PrimaryStrong, PrimaryLight, NoWhite, PrimaryDark } = useContext(ColorsCtx)
 
   const {menuState, setMenuState} = useContext(Context)
