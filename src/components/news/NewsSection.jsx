@@ -13,6 +13,7 @@ const NewsSection = ( ) => {
         {News.map( e =>
         <Card 
           key={e.key} 
+          id={e.key} 
           title={e.title} 
           paragraph={e.paragraph} 
           img={e.img}/>

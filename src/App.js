@@ -6,6 +6,8 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import New from "./pages/New";
+import NotFound from "./pages/NotFound";
 
 
 function App() {
@@ -13,16 +15,17 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <IconMenu />
       <BrowserRouter>
-        <Menu />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
-        </Routes>
+        <Header/>
+        <IconMenu />
+          <Menu />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:id" element={<New />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </BrowserRouter>
       <Footer />
     </>
