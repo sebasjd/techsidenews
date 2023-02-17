@@ -20,7 +20,7 @@ const Contact = () => {
       axios.post('https://api.telegram.org/bot6006558775:AAFAZzhndvLph-uzxf1M5ut8qK7WtV8Lqz8/sendMessage', 
       {
         chat_id: 5582297042,
-        text: `Nuevo mensaje del formulario:\n\nName:\n${values.name}\n\nPhone:\n${values.phone}\n\nEmail:\n${values.email}\n\nReference:\n${values.ref}\n\nMessage:\n${values.msg}`
+        text: `Nuevo mensaje del formulario:\n\n\nName:\n\n${values.name}\n\n\nPhone:\n\n${values.phone}\n\n\nEmail:\n\n${values.email}\n\n\nReference:\n\n${values.ref}\n\n\nMessage:\n\n${values.msg}`
       })
       .then(
         handleReset()
@@ -30,7 +30,6 @@ const Contact = () => {
       });
     }
   })
-
 
 
   return (
