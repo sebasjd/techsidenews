@@ -3,6 +3,13 @@ import { ColorsCtx } from '../styles/Colors'
 import { Button, ContactInput, Container, Label, TextArea } from '../styles/Inputs'
 import { useFormik } from 'formik'
 import axios from 'axios';
+import * as Yup from 'yup';
+
+const validationSchema = Yup.object({
+  name: Yup.string().trim().required('Required'),
+  email: Yup.string().trim().email('invalid email format').required('Required'),
+  message: Yup.string().trim().required('Required')
+})
 
 const Contact = () => {
 
@@ -14,13 +21,14 @@ const Contact = () => {
       phone: '',
       email: '',
       ref: '',
-      msg: ''
+      message: ''
     },
+    validationSchema,
     onSubmit: (values) => {
       axios.post('https://api.telegram.org/bot6006558775:AAFAZzhndvLph-uzxf1M5ut8qK7WtV8Lqz8/sendMessage', 
       {
         chat_id: 5582297042,
-        text: `Nuevo mensaje del formulario:\n\n\nName:\n\n${values.name}\n\n\nPhone:\n\n${values.phone}\n\n\nEmail:\n\n${values.email}\n\n\nReference:\n\n${values.ref}\n\n\nMessage:\n\n${values.msg}`
+        text: `New form message:\n\n\nName:\n\n${values.name}\n\n\nPhone:\n\n${values.phone}\n\n\nEmail:\n\n${values.email}\n\n\nReference:\n\n${values.ref}\n\n\nMessage:\n\n${values.message}`
       })
       .then(
         handleReset()
@@ -36,16 +44,60 @@ const Contact = () => {
     <>
       <Container onSubmit={handleSubmit}>
         <Label color2={PrimaryStrong}>Nombte y Apellido:</Label>
-        <ContactInput type='text' name='name' value={values.name} onChange={handleChange} bc={PrimaryStrong} bc2={PrimaryLight} color={NoWhite} color2={PrimaryStrong} />
+        <ContactInput type='text' 
+          name='name' 
+          value={values.name} 
+          onChange={handleChange} 
+          bc={PrimaryStrong} 
+          bc2={PrimaryLight} 
+          color={NoWhite} 
+          color2={PrimaryStrong} 
+        />
         <Label color2={PrimaryStrong}>Teléfono:</Label>
-        <ContactInput type='number' name='phone' value={values.phone} onChange={handleChange} bc={PrimaryStrong} bc2={PrimaryLight} color={NoWhite} color2={PrimaryStrong} />
+        <ContactInput type='number' 
+          name='phone' 
+          value={values.phone} 
+          onChange={handleChange} 
+          bc={PrimaryStrong} 
+          bc2={PrimaryLight} 
+          color={NoWhite} 
+          color2={PrimaryStrong} 
+        />
         <Label color2={PrimaryStrong}>Correo Electrónico:</Label>
-        <ContactInput  type='email' name='email' value={values.email} onChange={handleChange} bc={PrimaryStrong} bc2={PrimaryLight} color={NoWhite} color2={PrimaryStrong} />
+        <ContactInput  type='email' 
+          name='email' 
+          value={values.email} 
+          onChange={handleChange} 
+          bc={PrimaryStrong} 
+          bc2={PrimaryLight} 
+          color={NoWhite} 
+          color2={PrimaryStrong}
+        />
         <Label color2={PrimaryStrong}>Referencia:</Label>
-        <ContactInput  type='text' name='ref' value={values.ref} onChange={handleChange} bc={PrimaryStrong} bc2={PrimaryLight} color={NoWhite} color2={PrimaryStrong} />
+        <ContactInput  type='text' 
+          name='ref' 
+          value={values.ref} 
+          onChange={handleChange} 
+          bc={PrimaryStrong} 
+          bc2={PrimaryLight} 
+          color={NoWhite} 
+          color2={PrimaryStrong} 
+        />
         <Label color2={PrimaryStrong}>Mensaje:</Label>
-        <TextArea  type='text' name='msg' value={values.msg} onChange={handleChange} bc={PrimaryStrong} bc2={PrimaryLight} color={NoWhite} color2={PrimaryStrong} />
-        <Button type='submit' onSubmit={handleSubmit} color={NoWhite} bgc={PrimaryStrong}> Enviar </Button>
+        <TextArea  type='text' 
+          name='message' 
+          value={values.message} 
+          onChange={handleChange} 
+          bc={PrimaryStrong} 
+          bc2={PrimaryLight} 
+          color={NoWhite} 
+          color2={PrimaryStrong} 
+        />
+        <Button type='submit' 
+          onSubmit={handleSubmit} 
+          color={NoWhite} 
+          bgc={PrimaryStrong}> Enviar 
+        </Button>
       </Container>
     </>
   )
