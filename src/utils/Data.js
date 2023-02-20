@@ -1,4 +1,39 @@
 export const News = [
+    {
+    key: '9', 
+    title: 'Visión inmersiva en Maps y más: las novedades de Google impulsadas por inteligencia artificial',
+    paragraph: 'Las nuevas herramientas puntan a reimaginar la forma en que las personas realizan búsquedas, exploran e interactúan con la información, de forma más visual, natural e intuitiva.',
+    img: 'https://statics.eleconomista.com.ar/2023/02/crop/63e3bd592cd02__950x512.webp',
+    text:`Google anunció este miércoles nuevas funcionalidades basadas en Inteligencia Artificial que estarán disponibles en el Buscador, Maps y el Traductor.
+    
+    ¿Qué se viene en el Buscador y Google Lens? 
+Desde hace 23 años, la compañía trabaja para acercar todo el potencial de la tecnología a las nuevas formas en las que las personas buscan información. Entendiendo estas necesidades, y dando un paso más allá del texto en la barra de navegación, hoy presenta:
+
+Multibúsqueda disponible en todo el mundo: esta experiencia es una nueva forma de buscar utilizando texto e imágenes al mismo tiempo. ¿Cómo? Desde la aplicación "Google" se podrá utilizar Lens para sacar una foto o seleccionar una captura de pantalla y agregar una consulta a través de texto.
+Luego de su lanzamiento en EE.UU. en 2021, ahora estará disponible oficialmente a nivel mundial en dispositivos móviles, en todos los idiomas y países donde Lens se encuentre en funcionamiento. 
+
+Además, la multibúsqueda se expandirá a imágenes en la web a nivel mundial en dispositivos móviles en los próximos meses.
+
+Multibúsqueda cerca de mí: con esta funcionalidad se puede sacar una foto o hacer una captura de pantalla de un plato de comida y luego encontrar un lugar donde consumirlo o comprarlo cerca de donde se encuentra la persona, de manera rápida y fácil. En los próximos meses, estará disponible en todos los idiomas y países donde Lens funcione. 
+
+Nuevas experiencias desde Android: en dispositivos Android, se podrá utilizar Lens para buscar desde la pantalla fotos o videos que se encuentren en sitios web y aplicaciones, sin tener que abandonar dichos espacios (es decir, sin tener que hacer captura de pantalla). Estará disponible en los próximos meses, en todos los idiomas y países en los que Lens funcione.
+
+Experiencias únicas con Google Maps:
+
+La plataforma de geolocalización comparte nuevas funcionalidades que revelan cómo la inteligencia artificial ayuda a generar más y nuevas experiencias para explorar y navegar por el mundo:
+
+Vista inmersiva: a partir de hoy, esta función comenzará a implementarse en cinco nuevas ciudades: Londres, Los Ángeles, Nueva York, San Francisco y Tokio. Y en los próximos meses, se lanzará en otras, incluidas Florencia, Venecia, Ámsterdam y Dublín.
+
+Live View: se extenderá a más ciudades de Europa en los próximos meses, incluidas Barcelona, Madrid y Dublín. A su vez, su versión para navegar el interior de lugares se estará expandiendo a más de mil nuevos aeropuertos, estaciones de tren y centros comerciales en ciudades de todo el mundo, incluyendo Londres, París, Berlín, Madrid, Barcelona, Praga, Frankfurt, Tokio, Sydney, Melbourne, São Paulo, Singapur y Taipei.
+
+Direcciones en un vistazo: ahora los usuarios podrán seguir su viaje directamente desde la vista resumida de la ruta o la pantalla de bloqueo, incluyendo los tiempos estimados de llegada actualizados y dónde realizar el siguiente giro (información que antes sólo era visible utilizando el modo de navegación completa). Comenzará a implementarse globalmente en Android e iOS en los próximos meses.
+
+Un nuevo paso en las traducciones de Google
+
+Opciones de traducción contextual: se comenzará a proporcionar traducciones más amplias y contextuales para palabras sueltas, frases cortas y frases con múltiples significados, así se ayudará a comprender mejor el texto y encontrar la mejor traducción según cada contexto. En las próximas semanas, estará disponible en inglés, francés, alemán, japonés y español y en los siguientes meses, se expandirá a más idiomas. 
+
+Funciones de traducción en Lens: disponible en todo el mundo, ahora, las funciones de traducción con realidad aumentada en Google Lens se fusionarán a la perfección con el texto traducido en imágenes. De esta manera, se podrán ver de manera más natural. 
+`},
   {
     key: '8', 
     title: 'Ahora vas a poder ganar dinero con tu cuenta de Twitter',

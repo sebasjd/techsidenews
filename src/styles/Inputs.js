@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 
 export const Container = styled.form`
-position: relative;
-flex-direction: column;
-top: 100px;
-width: 100vw;
-height: auto;
-display: flex;
-justify-content: center;
-align-items: center;
+  position: relative;
+  flex-direction: column;
+  top: 100px;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 export const ContactInput = styled.input`
   display: flex;
@@ -28,33 +28,37 @@ export const ContactInput = styled.input`
   letter-spacing: 2px;
   transition: all .3s;
 
-&:focus{
-  color: ${props=>props.color};
-  font-size: 20px;  border: outset 1px ${props=>props.bc2};
-}
+  &:focus{
+    color: ${props=>props.color};
+    font-size: 20px;  
+    border: inset 1px ${props=>props.bc2};
+    box-shadow: 3px 3px 5px .2px ${props=> props.color2};
+  }
 `
 
 export const TextArea = styled.textarea`
-display: flex;
-position: relative;
-border: inset 1px ${props=>props.bc};
-outline: none;
-background-color: transparent;
-height: 120px;
-width: 85%;
-padding: 5px 10px;
-max-width: 350px;
-color: ${props=>props.color2};
-font-size: 20px;
-text-align: start;
-white-space: pre-line;
-letter-spacing: 2px;
-overflow-y: visible;
-transition: all .3s;
+  display: flex;
+  position: relative;
+  border: inset 1px ${props=>props.bc};
+  outline: none;
+  background-color: transparent;
+  height: 120px;
+  width: 85%;
+  padding: 5px 10px;
+  max-width: 350px;
+  color: ${props=>props.color2};
+  font-size: 18px;
+  text-align: start;
+  white-space: pre-line;
+  letter-spacing: 2px;
+  overflow-y: visible;
+  transition: all .3s;
 
 &:focus{
   color: ${props=>props.color};
-  font-size: 20px;  border: outset 1px ${props=>props.bc2};
+  font-size: 20px;  
+  border: inset 1px ${props=>props.bc2};
+  box-shadow: 3px 3px 5px .2px ${props=> props.color2};
 }
 `
 
