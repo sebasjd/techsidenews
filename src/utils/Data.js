@@ -232,4 +232,4 @@ export const News = [
         
     De esta forma, quizás puedas encontrar rentabilidad en aquellos tuits que se han estado viralizando, en una forma de atraer contenido a la plataforma a corto plazo.
     `  },
-]
+];

@@ -40,7 +40,7 @@ position: relative;
 border: inset 1px ${props=>props.bc};
 outline: none;
 background-color: transparent;
-height: 250px;
+height: 120px;
 width: 85%;
 padding: 5px 10px;
 max-width: 350px;
@@ -59,19 +59,26 @@ transition: all .3s;
 `
 
 export const Label = styled.label`
-display: flex;
-position: relative;
-color: ${props=>props.color2};
-font-size: 20px;
-text-align: left;
-width: 85%;
-max-width: 350px;
-letter-spacing: 2px;
+  display: flex;
+  position: relative;
+  color: ${props=>props.color2};
+  font-size: 20px;
+  text-align: left;
+  width: 85%;
+  max-width: 350px;
+  letter-spacing: 2px;
 `
 
 export const Button = styled.button`
   background-color: ${props=>props.bgc};
   color: ${props=>props.color};
-  width: 100px;
-  height: 70px;
+  width: 90%;
+  max-width: 375px;
+  height: 45px;
+  margin-top: 20px;
+  opacity: .9;
+  font-size: 20px;
+  font-weight: bold;
+  border: inset 1px ${props=>props.bgc};
+
 `

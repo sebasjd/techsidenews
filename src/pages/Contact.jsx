@@ -13,7 +13,7 @@ const validationSchema = Yup.object({
 
 const Contact = () => {
 
-  const { PrimaryStrong, NoWhite, PrimaryLight } = useContext(ColorsCtx)
+  const { PrimaryStrong, NoWhite, PrimaryLight, PrimaryDark } = useContext(ColorsCtx)
 
   const { values, handleChange, handleSubmit, handleReset } = useFormik({
     initialValues: {
@@ -43,8 +43,9 @@ const Contact = () => {
   return (
     <>
       <Container onSubmit={handleSubmit}>
-        <Label color2={PrimaryStrong}>Nombte y Apellido:</Label>
+        <Label for="name" color2={PrimaryStrong}>Nombte y Apellido:</Label>
         <ContactInput type='text' 
+          id='name'
           name='name' 
           value={values.name} 
           onChange={handleChange} 
@@ -53,8 +54,9 @@ const Contact = () => {
           color={NoWhite} 
           color2={PrimaryStrong} 
         />
-        <Label color2={PrimaryStrong}>Teléfono:</Label>
+        <Label for="phone" color2={PrimaryStrong}>Teléfono:</Label>
         <ContactInput type='number' 
+          id="phone"
           name='phone' 
           value={values.phone} 
           onChange={handleChange} 
@@ -63,18 +65,9 @@ const Contact = () => {
           color={NoWhite} 
           color2={PrimaryStrong} 
         />
-        <Label color2={PrimaryStrong}>Correo Electrónico:</Label>
-        <ContactInput  type='email' 
-          name='email' 
-          value={values.email} 
-          onChange={handleChange} 
-          bc={PrimaryStrong} 
-          bc2={PrimaryLight} 
-          color={NoWhite} 
-          color2={PrimaryStrong}
-        />
-        <Label color2={PrimaryStrong}>Referencia:</Label>
+        <Label for='ref' color2={PrimaryStrong}>Referencia:</Label>
         <ContactInput  type='text' 
+          id='ref'
           name='ref' 
           value={values.ref} 
           onChange={handleChange} 
@@ -83,8 +76,9 @@ const Contact = () => {
           color={NoWhite} 
           color2={PrimaryStrong} 
         />
-        <Label color2={PrimaryStrong}>Mensaje:</Label>
+        <Label for='message' color2={PrimaryStrong}>Mensaje:</Label>
         <TextArea  type='text' 
+          id='message'
           name='message' 
           value={values.message} 
           onChange={handleChange} 
@@ -95,7 +89,7 @@ const Contact = () => {
         />
         <Button type='submit' 
           onSubmit={handleSubmit} 
-          color={NoWhite} 
+          color={PrimaryDark} 
           bgc={PrimaryStrong}> Enviar 
         </Button>
       </Container>
