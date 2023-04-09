@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 
 const validationSchema = Yup.object({
   name: Yup.string().trim().required('Required'),
-  email: Yup.string().trim().email('invalid email format').required('Required'),
+  phone: Yup.string().required('Required'),
   message: Yup.string().trim().required('Required')
 })
 
@@ -19,7 +19,6 @@ const Contact = () => {
     initialValues: {
       name:'',
       phone: '',
-      email: '',
       ref: '',
       message: ''
     },
@@ -28,7 +27,7 @@ const Contact = () => {
       axios.post('https://api.telegram.org/bot6006558775:AAFAZzhndvLph-uzxf1M5ut8qK7WtV8Lqz8/sendMessage', 
       {
         chat_id: 5582297042,
-        text: `New form message:\n\n\nName:\n\n${values.name}\n\n\nPhone:\n\n${values.phone}\n\n\nEmail:\n\n${values.email}\n\n\nReference:\n\n${values.ref}\n\n\nMessage:\n\n${values.message}`
+        text: `New form message:\n\n\n      Name:\n\n${values.name}\n\n\n      Phone:\n\n${values.phone}\n\n\n      Reference:\n\n${values.ref}\n\n\n      Message:\n\n${values.message}`
       })
       .then(
         handleReset()
