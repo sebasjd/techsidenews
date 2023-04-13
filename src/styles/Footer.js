@@ -1,16 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px 0 30px 0;
+  gap: 20px;
   margin-top: 300px;
   width: 100%;
-  height: 300px;
+  height: auto;
   background-color: ${props => props.bgc};
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-around;
+  
+  @media (max-width: 630px){
+    justify-content: stretch;
+    padding-left: 20px;
+    gap: 60px;
+  }
 `
 export const Columns = styled.div`
   display: flex;

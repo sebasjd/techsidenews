@@ -10,19 +10,19 @@ const Footer = () => {
       <Container bgc={NoBlack}>
         <Columns color={NoWhite}> 
           <p>Nosotros:</p>
-          <t>Tech Side News S.A.</t>
-          <t>CUIT: 30-67181325-7</t>
-          <t>Della Paolera Carlos M. 265</t>
-          <t>Ciudad Autonoma de Buenos Aires</t>
+          <span>Tech Side News S.A.</span>
+          <span>CUIT: 30-67181325-7</span>
+          <span>Della Paolera Carlos M. 265</span>
+          <span>Ciudad Autonoma de Buenos Aires</span>
         </Columns>
         <Columns color={NoWhite}>
           <p>Con el apoyo de:</p>
-          <t>NUCBA</t> 
-          <t>OpenAI</t> 
-          <t>Developer.Mozilla</t>
-          <t>Git</t>
-          <t>GitHub</t>
-          <t>Vercel</t>
+          <span>NUCBA</span> 
+          <span>OpenAI</span> 
+          <span>Developer.Mozilla</span>
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>Vercel</span>
         </Columns>
         <Columns color={NoWhite}> 
           © 2023 Todos los derechos reservados.

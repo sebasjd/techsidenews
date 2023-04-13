@@ -11,6 +11,7 @@ body {
   overflow-x: hidden;
 }
 
+
 /* ELIMINAR BOTONCITOS DE INPUT NUMBER */
 
 input[type=number]::-webkit-inner-spin-button, 

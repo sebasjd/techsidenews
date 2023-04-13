@@ -16,7 +16,7 @@ export const ContactInput = styled.input`
   position: relative;
   border: inset 1px ${props=>props.bc};
   outline: none;
-  background-color: transparent;
+  background-color: transparent !important;
   height: 25px;
   width: 85%;
   max-width: 350px;
@@ -53,7 +53,8 @@ export const TextArea = styled.textarea`
   letter-spacing: 2px;
   overflow-y: visible;
   transition: all .3s;
-
+  margin-bottom: 5px;
+  
 &:focus{
   color: ${props=>props.color};
   font-size: 20px;  
@@ -85,4 +86,8 @@ export const Button = styled.button`
   font-weight: bold;
   border: inset 1px ${props=>props.bgc};
 
+`
+
+export const ErrorMsg = styled.div`
+color: red;
 `
