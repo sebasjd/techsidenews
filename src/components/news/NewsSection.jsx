@@ -4,7 +4,6 @@ import { Advertisement } from '../../styles/Advertisement'
 import { News } from '../../utils/Data'
 import Card from './Card'
 import { Advertisements } from '../../utils/Advertisements'
-import {InView} from 'react-intersection-observer'
 
 const NewsSection = ( ) => {
 
