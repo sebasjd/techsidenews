@@ -11,7 +11,13 @@ align-items: center;
 justify-content: space-around;
 border-radius: 5px;
 
-  @media (max-width: 915px){
-    width: 96%;
+@media (max-width: 915px){
+  width: 96%;
+}
+
+@media (max-width: 723px){
+  background-image: url(${props=>props.imgShort});
+  height: 440px;
+  width: 350px;
   }
 `

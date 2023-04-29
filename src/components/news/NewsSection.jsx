@@ -24,7 +24,8 @@ const NewsSection = ( ) => {
                   />
                   {e.key % 6 === 0 && <Advertisement
                     key={Advertisements[e.key/6].id}
-                    img={Advertisements[e.key/6].img} 
+                    img={Advertisements[e.key/6].imgLarge} 
+                    imgShort={Advertisements[e.key/6].imgShort} 
                     />}
                 </React.Fragment> 
             )}
