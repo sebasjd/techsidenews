@@ -10,4 +10,6 @@ display: flex;
 flex-flow: wrap;
 justify-content: center;
 gap: 20px;
+margin-left: 50%;
+transform: translateX(-50%);
 `
