@@ -57,7 +57,7 @@ const Contact = () => {
         El mensaje fue envaido vía Telegram, directo al Dev
       </Modal>}
       <Container onSubmit={handleSubmit}>
-        <Label for="name" color2={PrimaryStrong}>Nombte y Apellido:</Label>
+        <Label htmlFor="name" color2={PrimaryStrong}>Nombte y Apellido:</Label>
         <ContactInput type='text' 
           id='name'
           name='name' 
@@ -71,7 +71,7 @@ const Contact = () => {
           autoComplete='off'
         />
         {touched.name && values.name === '' ? <ErrorMsg>* Este campo es obligatorio</ErrorMsg> : null}
-        <Label for="phone" color2={PrimaryStrong}>Teléfono:</Label>
+        <Label htmlFor="phone" color2={PrimaryStrong}>Teléfono:</Label>
         <ContactInput type='number' 
           id="phone"
           name='phone' 
@@ -85,7 +85,7 @@ const Contact = () => {
           autoComplete='off'
         />
         {touched.phone && values.phone === '' ? <ErrorMsg>* Este campo es obligatorio</ErrorMsg> : null}
-        <Label for='ref' color2={PrimaryStrong}>Referencia:</Label>
+        <Label htmlFor='ref' color2={PrimaryStrong}>Referencia:</Label>
         <ContactInput  type='text' 
           id='ref'
           name='ref' 
@@ -97,7 +97,7 @@ const Contact = () => {
           color2={PrimaryStrong} 
           autoComplete='off'
         />
-        <Label for='message' color2={PrimaryStrong}>Mensaje:</Label>
+        <Label htmlFor='message' color2={PrimaryStrong}>Mensaje:</Label>
         <TextArea  type='text' 
           id='message'
           name='message' 

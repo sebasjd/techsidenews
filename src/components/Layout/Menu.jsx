@@ -26,6 +26,7 @@ const Menu = () => {
         <Option to="/" hbgc={PrimaryStrong} hcolor={NoBlack} hbs={NoWhite} color={PrimaryStrong} onClick={() => setMenuState(false)}>INICIO</Option>
         <Option to="about" hbgc={PrimaryStrong} hcolor={NoBlack} hbs={NoWhite} color={PrimaryStrong} onClick={() => setMenuState(false)}>QUE ES TSN?</Option>
         <Option to="contact" hbgc={PrimaryStrong} hcolor={NoBlack} hbs={NoWhite} color={PrimaryStrong} onClick={() => setMenuState(false)}>CONTACTO</Option>
+        <Option to="login" hbgc={PrimaryStrong} hcolor={NoBlack} hbs={NoWhite} color={PrimaryStrong} onClick={() => setMenuState(false)}>LOG IN</Option>
         <CloseButton  onClick={() => setMenuState(!menuState)} color={PrimaryStrong} fds={PrimaryLight} hfds={NoWhite} mbg={PrimaryDark}>
           {window.innerWidth <= 480 ? <RiMenuUnfoldLine/> : <RiMenuFoldLine/>}
         </CloseButton>

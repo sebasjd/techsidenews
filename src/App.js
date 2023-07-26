@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import New from "./pages/New";
+import NewAccount from "./pages/NewAccount";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
 
@@ -23,6 +25,8 @@ function App() {
             <Route path=":id" element={<New />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="login" element={<Login />} />
+            <Route path="login/newaccount" element={<NewAccount />} />
             <Route path="404" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

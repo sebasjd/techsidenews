@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 
 export const Container = styled.form`
@@ -86,6 +87,21 @@ export const Button = styled.button`
   font-weight: bold;
   border: inset 1px ${props=>props.bgc};
 
+`
+export const Button2 = styled(NavLink)`
+  background-color: ${props=>props.bgc};
+  color: ${props=>props.color};
+  width: 90%;
+  max-width: 375px;
+  height: 35px;
+  margin-top: 20px;
+  opacity: .9;
+  font-size: 20px;
+  font-weight: bold;
+  border: inset 1px ${props=>props.bgc};
+  font-style: none;
+  text-decoration: none;
+  text-align: center;
 `
 
 export const ErrorMsg = styled.div`
