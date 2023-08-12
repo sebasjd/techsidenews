@@ -9,9 +9,9 @@ import { Modal } from '../styles/Modal-Title';
 
 const validationSchema = Yup.object({
   username: Yup.string().trim().required('Debe completar este campo'),
-  password: Yup.string().required('Debe completar este campo')/*.matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+  password: Yup.string().required('Debe completar este campo').matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/,
     "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
-  )*/,
+  ),
   confirmPassword:Yup.string().oneOf([Yup.ref('password'), null], 'Las contraseñas deben coincidir').required('Debe confirmar la contraseña'),
   email: Yup.string().email('Aquí debe ingresar un correo electrónico').required('Debe completar este campo'),
 })
