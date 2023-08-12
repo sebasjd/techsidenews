@@ -30,7 +30,7 @@ const NewAccount = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
-    await axios.post('http://apitsn.vercel.app/api/register',
+    await axios.post('https://apitsn.vercel.app/api/register',
     {
     email: values.email,
     username: values.username,
