@@ -30,10 +30,10 @@ const Login = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
-    const post = await axios.post('http://localhost:5000/api/createUser',
+    const post = await axios.post('https://apitsn.vercel.app/api/login',
     {
     username: values.username,
-    password: values.password
+    password: values.password 
     }
     )
       .then(

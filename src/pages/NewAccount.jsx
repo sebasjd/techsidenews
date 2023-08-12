@@ -30,8 +30,9 @@ const NewAccount = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
-    const post = await axios.post('http://localhost:5000/api/createUser',
+    await axios.post('http://apitsn.vercel.app/api/register',
     {
+    email: values.email,
     username: values.username,
     password: values.password
     }
@@ -89,7 +90,7 @@ const NewAccount = () => {
           autoComplete='off'
         />
         {touched.email && values.email === '' ? <ErrorMsg>* Este campo es obligatorio </ErrorMsg> : null}
-        {touched.email && values.email != '' && !values.email.includes("@" && ".") ? <ErrorMsg>* Debe ser un correo electrónico </ErrorMsg> : null}
+        {touched.email && values.email !== '' && !values.email.includes("@" && ".") ? <ErrorMsg>* Debe ser un correo electrónico </ErrorMsg> : null}
         <Label htmlFor="password" color2={PrimaryStrong}>Nueva contraseña:</Label>
         <ContactInput type='password' 
           id="password"
@@ -118,7 +119,7 @@ const NewAccount = () => {
           autoComplete='off'
         />
         {touched.confirmPassword && values.confirmPassword === '' ? <ErrorMsg>* Este campo es obligatorio</ErrorMsg> : null}
-        {values.confirmPassword != '' && values.confirmPassword != values.password? <ErrorMsg>* Este campo debe coincidir con el anterior </ErrorMsg> : null}
+        {values.confirmPassword !== '' && values.confirmPassword !== values.password? <ErrorMsg>* Este campo debe coincidir con el anterior </ErrorMsg> : null}
         <Button type='submit' 
           onSubmit={handleSubmit} 
           color={PrimaryDark} 
