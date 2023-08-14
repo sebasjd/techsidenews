@@ -3,34 +3,22 @@ import { ColorsCtx } from '../styles/Colors'
 import { Button, Button2, ContactInput, Container, ErrorMsg, Label } from '../styles/Inputs'
 import { ErrorMessage, useFormik } from 'formik'
 import axios from 'axios';
-import * as Yup from 'yup';
 import { Context } from '../utils/Context';
 import { Modal } from '../styles/Modal-Title';
 
-const validationSchema = Yup.object({
-  username: Yup.string().trim().required('Debe completar este campo'),
-  password: Yup.string().required('Debe completar este campo')/*.matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-    "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
-  )*/,
-  confirmPassword:Yup.string().oneOf([Yup.ref('password'), null], 'Las contraseñas deben coincidir').required('Debe confirmar la contraseña'),
-  email: Yup.string().email('Aquí debe ingresar un correo electrónico').required('Debe completar este campo'),
-})
 
 const Login = () => {
 
   const { PrimaryStrong, NoWhite, PrimaryLight, PrimaryDark, Gray } = useContext(ColorsCtx);
   const { showModal, setShowModal } = useContext(Context);
 
-  const { values, handleChange, handleSubmit, handleReset, touched, handleBlur } = useFormik({
+  const { values, handleChange, handleSubmit, handleReset, handleBlur } = useFormik({
     initialValues: {
       username:'',
       password: '',
-      confirmPassword:'',
-      email:'',
     },
-    validationSchema,
     onSubmit: async (values) => {
-    const post = await axios.post('https://apitsn.vercel.app/api/login',
+    await axios.post('https://apitsn.vercel.app/api/login',
     {
     username: values.username,
     password: values.password 
@@ -44,7 +32,7 @@ const Login = () => {
         }, 5000)
       )
       .catch(error => {
-        console.error("error", error);
+        console.log("error", error);
       });
     }
   })
@@ -74,7 +62,7 @@ const Login = () => {
           onBlur={handleBlur}
           autoComplete='off'
         />
-        <Label htmlFor="password" color2={PrimaryStrong}>Nueva contraseña:</Label>
+        <Label htmlFor="password" color2={PrimaryStrong}>Contraseña:</Label>
         <ContactInput type='password' 
           id="password"
           name='password' 

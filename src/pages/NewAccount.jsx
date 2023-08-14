@@ -8,11 +8,12 @@ import { Context } from '../utils/Context';
 import { Modal } from '../styles/Modal-Title';
 
 const validationSchema = Yup.object({
-  username: Yup.string().trim().required('Debe completar este campo'),
-  password: Yup.string().required('Debe completar este campo').min(8, 'At least 8 characters'),
+  password: Yup.string().required('2Debe completar este campo').min(8, 'At least 8 characters'),
   confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Las contraseñas deben coincidir').required('Debe confirmar la contraseña'),
-  email: Yup.string().email('Aquí debe ingresar un correo electrónico').required('Debe completar este campo'),
+  email: Yup.string().email('Aquí debe ingresar un correo electrónico').required('3Debe completar este campo'),
+  username: Yup.string().trim().required('1Debe completar este campo'),
 })
+
 
 const NewAccount = () => {
 
@@ -28,27 +29,28 @@ const NewAccount = () => {
     },
     validationSchema,
     onSubmit: async (values) => {
+      
     await axios.post('https://apitsn.vercel.app/api/register',
     {
-    email: values.email,
-    username: values.username,
-    password: values.password
+      username: values.username,
+      email: values.email,
+      password: values.password
     }
     )
-      .then(
-        handleReset(),
-        setShowModal(true),
+    .then(
+      handleReset(),
+      setShowModal(true),
         setTimeout(()=> {
           setShowModal(false)
         }, 5000)
       )
       .catch(error => {
-        console.error("error", error);
+        console.log(error.message);
       });
     }
   })
 
-
+  
   return (
     <>
       {showModal && 
@@ -103,6 +105,7 @@ const NewAccount = () => {
           autoComplete='off'
         />
         {touched.password && values.password === '' ? <ErrorMsg>* Este campo es obligatorio</ErrorMsg> : null}
+        {touched.password && values.password.length < 8 ? <ErrorMsg>* Debe contener al menos 8 caracteres</ErrorMsg> : null}
         <Label htmlFor="confirmPassword" color2={PrimaryStrong}>Repetir contraseña:</Label>
         <ContactInput type='password' 
           id="confirmPassword"
