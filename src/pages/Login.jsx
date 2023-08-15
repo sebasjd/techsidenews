@@ -24,7 +24,7 @@ const Login = () => {
     password: values.password 
     }
     )
-    console.log(response.response.data)
+    console.log(response.data)
     .then(
         // handleReset(),
         setShowModal(true),
