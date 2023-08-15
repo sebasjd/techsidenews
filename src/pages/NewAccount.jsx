@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ColorsCtx } from '../styles/Colors'
 import { Button, ContactInput, Container, ErrorMsg, Label } from '../styles/Inputs'
-import { ErrorMessage, useFormik } from 'formik'
+import { useFormik } from 'formik'
 import axios from 'axios';
 import * as Yup from 'yup';
 import { Context } from '../utils/Context';

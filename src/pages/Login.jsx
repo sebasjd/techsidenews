@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { ColorsCtx } from '../styles/Colors'
-import { Button, Button2, ContactInput, Container, ErrorMsg, Label } from '../styles/Inputs'
-import { ErrorMessage, useFormik } from 'formik'
+import { Button, Button2, ContactInput, Container, Label } from '../styles/Inputs'
+import { useFormik } from 'formik'
 import axios from 'axios';
 import { Context } from '../utils/Context';
 import { Modal } from '../styles/Modal-Title';
@@ -31,8 +31,8 @@ const Login = () => {
     password: values.password 
     },
     )
+    success(response)
     .then(
-        success(response)
       )
       .catch(error => {
         console.log(error.response.data.message);
