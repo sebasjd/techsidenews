@@ -33,7 +33,7 @@ const Login = () => {
         }, 5000)
       )
       .catch(error => {
-        console.log("error", error.response.data);
+        console.log("error", error.response.data.message);
       });
     }
   })
