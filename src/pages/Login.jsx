@@ -11,6 +11,13 @@ const Login = () => {
 
   const { PrimaryStrong, NoWhite, PrimaryLight, PrimaryDark, Gray } = useContext(ColorsCtx);
   const { showModal, setShowModal } = useContext(Context);
+  const success = (response) => {if (!response) {
+    handleReset()
+    setShowModal(true)
+    setTimeout(()=> {
+      setShowModal(false)
+    }, 5000)
+  }};
 
   const { values, handleChange, handleSubmit, handleReset, handleBlur } = useFormik({
     initialValues: {
@@ -25,15 +32,10 @@ const Login = () => {
     },
     )
     .then(
-      console.log(response),
-        // handleReset(),
-        setShowModal(true),
-        setTimeout(()=> {
-          setShowModal(false)
-        }, 5000)
+        success(response)
       )
       .catch(error => {
-        console.log("error", error.response.data.message);
+        console.log(error.response.data.message);
       });
     }
   })
