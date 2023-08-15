@@ -18,15 +18,15 @@ const Login = () => {
       password: '',
     },
     onSubmit: async (values) => {
-    await axios.post('https://apitsn.vercel.app/api/login',
+    const response = await axios.post('https://apitsn.vercel.app/api/login',
     {
     username: values.username,
     password: values.password 
     }
     )
+    console.log(response.data.message)
     .then(
-        console.log(Response),
-        handleReset(),
+        // handleReset(),
         setShowModal(true),
         setTimeout(()=> {
           setShowModal(false)
