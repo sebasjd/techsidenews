@@ -25,7 +25,7 @@ const Login = () => {
     },
     )
     .then(
-      console.log("response"),
+      console.log(response),
         // handleReset(),
         setShowModal(true),
         setTimeout(()=> {
