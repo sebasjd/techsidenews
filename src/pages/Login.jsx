@@ -32,8 +32,9 @@ const Login = () => {
     },
     )
     success(response)
-    // .then(
-    //   )
+    .then(
+      console.log("success")
+      )
       .catch(error => {
         console.log(error.response.data.message);
       });
