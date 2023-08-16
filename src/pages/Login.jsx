@@ -24,16 +24,15 @@ const Login = () => {
       {
       username: values.username,
       password: values.password 
-      }
-      )
-      { if (response.data.success) {
+      })
+      if (!response.data) {
         console.log(response)
         handleReset()
         setShowModal(true)
         setTimeout(()=> {
           setShowModal(false)
         }, 5000)}
-      }
+      
     }
     
       catch (error) {
