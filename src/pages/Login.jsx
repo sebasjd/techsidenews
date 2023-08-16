@@ -25,8 +25,7 @@ const Login = () => {
       username: values.username,
       password: values.password 
       })
-      console.log(response)
-      if (!response.data) {
+      if (response.data.message == 'success') {
         console.log(response)
         handleReset()
         setShowModal(true)
