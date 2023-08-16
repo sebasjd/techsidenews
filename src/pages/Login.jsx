@@ -25,16 +25,16 @@ const Login = () => {
       username: values.username,
       password: values.password 
       })
+      console.log(response)
       if (!response.data) {
         console.log(response)
         handleReset()
         setShowModal(true)
         setTimeout(()=> {
           setShowModal(false)
-        }, 5000)}
-      
+        }, 5000)
+      }
     }
-    
       catch (error) {
         console.log(error.response.data.message);
       };
