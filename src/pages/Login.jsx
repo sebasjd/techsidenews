@@ -7,6 +7,7 @@ import { Context } from '../utils/Context';
 import { Modal } from '../styles/Modal-Title';
 
 
+
 const Login = () => {
 
   const { PrimaryStrong, NoWhite, PrimaryLight, PrimaryDark, Gray } = useContext(ColorsCtx);
@@ -25,9 +26,7 @@ const Login = () => {
       username: values.username,
       password: values.password 
       })
-      if (response.data.message == 'success') {
-        console.log(response)
-        handleReset()
+      if (response.data.message === 'success') {
         setShowModal(true)
         setTimeout(()=> {
           setShowModal(false)

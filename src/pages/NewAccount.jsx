@@ -6,6 +6,7 @@ import axios from 'axios';
 import * as Yup from 'yup';
 import { Context } from '../utils/Context';
 import { Modal } from '../styles/Modal-Title';
+import { useNavigate } from 'react-router-dom';
 
 const validationSchema = Yup.object({
   password: Yup.string().required('2Debe completar este campo').min(8, 'At least 8 characters'),
@@ -19,6 +20,7 @@ const NewAccount = () => {
 
   const { PrimaryStrong, NoWhite, PrimaryLight, PrimaryDark } = useContext(ColorsCtx);
   const { showModal, setShowModal } = useContext(Context);
+  const history = useNavigate();
 
   const { values, handleChange, handleSubmit, handleReset, touched, handleBlur } = useFormik({
     initialValues: {
@@ -39,6 +41,7 @@ const NewAccount = () => {
     )
     .then(
       handleReset(),
+      history.push('https://techsidenews.vercel.app/login'),
       setShowModal(true),
         setTimeout(()=> {
           setShowModal(false)
