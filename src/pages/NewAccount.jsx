@@ -20,7 +20,7 @@ const NewAccount = () => {
 
   const { PrimaryStrong, NoWhite, PrimaryLight, PrimaryDark } = useContext(ColorsCtx);
   const { showModal, setShowModal } = useContext(Context);
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const { values, handleChange, handleSubmit, handleReset, touched, handleBlur } = useFormik({
     initialValues: {
@@ -41,7 +41,7 @@ const NewAccount = () => {
     )
     .then(
       handleReset(),
-      history.push('https://techsidenews.vercel.app/login'),
+      navigate('https://techsidenews.vercel.app/login'),
       setShowModal(true),
         setTimeout(()=> {
           setShowModal(false)
