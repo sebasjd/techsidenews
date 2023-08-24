@@ -41,7 +41,7 @@ const NewAccount = () => {
     )
     .then(
       handleReset(),
-      navigate('https://techsidenews.vercel.app/login'),
+      navigate(-1),
       setShowModal(true),
         setTimeout(()=> {
           setShowModal(false)
