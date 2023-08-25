@@ -16,8 +16,9 @@ const validationSchema = Yup.object({
 })
 
 
-const NewAccount = () => {
 
+
+const NewAccount = () => {
   const { PrimaryStrong, NoWhite, PrimaryLight, PrimaryDark } = useContext(ColorsCtx);
   const { showModal, setShowModal } = useContext(Context);
   const navigate = useNavigate();

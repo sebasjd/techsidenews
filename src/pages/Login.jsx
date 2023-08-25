@@ -14,7 +14,7 @@ const Login = () => {
   const { showModal, setShowModal } = useContext(Context);
   
 
-  const { values, handleChange, handleSubmit, handleReset, handleBlur } = useFormik({
+  const { values, handleChange, handleSubmit, handleBlur } = useFormik({
     initialValues: {
       username:'',
       password: '',
