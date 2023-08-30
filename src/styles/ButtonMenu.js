@@ -18,8 +18,12 @@ cursor: pointer;
 }
 @media (max-width: 480px){
 font-size: 40px;
-top: 51px;
+top: 60px;
 left: 89.1%;
 background-color: ${props=> props.mbgc};
+&:hover{
+  transform: none;
+  filter: none;
+}
 }
 `

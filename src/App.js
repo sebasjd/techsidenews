@@ -10,16 +10,19 @@ import New from "./pages/New";
 import NewAccount from "./pages/NewAccount";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import FavIcon from "./components/Layout/favsIcon";
+import Favs from "./components/Layout/favs";
 
 
 function App() {
-
 
   return (
     <>
         <Header/>
         <IconMenu />
         <Menu />
+        <FavIcon/>
+        <Favs />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path=":id" element={<New />} />

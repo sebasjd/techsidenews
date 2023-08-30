@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const News = [
     {
     key: '1', 
@@ -1616,3 +1618,8 @@ Funciones de traducción en Lens: disponible en todo el mundo, ahora, las funcio
           De esta forma, quizás puedas encontrar rentabilidad en aquellos tuits que se han estado viralizando, en una forma de atraer contenido a la plataforma a corto plazo.
           `  },
 ];
+
+
+
+// export const News = async (res) => {
+//   await axios.get('https://apitsn.vercel.app/api/news')};

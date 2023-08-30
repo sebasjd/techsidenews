@@ -19,7 +19,7 @@ cursor: pointer;
 }
 @media (max-width: 480px){
 font-size: 40px;
-top: 110px;
+top: 160px;
 left: 89.1%;
 background-color: ${props=> props.mbgc};
 }`
