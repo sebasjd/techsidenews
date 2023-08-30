@@ -1628,5 +1628,6 @@ import axios from 'axios';
 
 export const News = axios.get('https://apitsn.vercel.app/api/news')
   .then(function (response) {
+    console.log(response.data)
     return response.data;
   })
