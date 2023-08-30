@@ -30,15 +30,15 @@ const NewsSection = ( ) => {
             <React.Fragment key={e._id} >
               <Card 
                 key={e._id} 
-                id={e._id} 
+                id={e.index} 
                 title={e.title} 
                 paragraph={e.paragraph} 
                 img={e.img}
               />
-              {e.key % 6 === 0 && <Advertisement
-                key={Advertisements[e.key/6].id}
-                img={Advertisements[e.key/6].imgLarge} 
-                imgShort={Advertisements[e.key/6].imgShort} 
+              {e.index % 6 === 0 && <Advertisement
+                key={Advertisements[e.index/6].id}
+                img={Advertisements[e.index/6].imgLarge} 
+                imgShort={Advertisements[e.index/6].imgShort} 
               />}
             </React.Fragment> 
           )}
