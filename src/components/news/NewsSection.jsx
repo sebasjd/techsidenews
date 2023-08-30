@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from '../../styles/NewsContainer'
 import { Advertisement } from '../../styles/Advertisement'
+import { News, News2 } from '../../utils/Data'
 import Card from './Card'
 import { Advertisements } from '../../utils/Advertisements'
 import axios from 'axios'
@@ -9,9 +10,8 @@ const NewsSection =  ( ) => {
 
   axios.get('https://apitsn.vercel.app/api/news')
   .then(function (response) {
-
-    const News = response.data
-
+  const News3 = response.data
+console.log(News3)
     return (
     <>
       <Container>
