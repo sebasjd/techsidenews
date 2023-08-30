@@ -4,11 +4,17 @@ import { Advertisement } from '../../styles/Advertisement'
 import { News, News2 } from '../../utils/Data'
 import Card from './Card'
 import { Advertisements } from '../../utils/Advertisements'
+import axios from 'axios'
 
-const NewsSection = ( ) => {
+const NewsSection =  ( ) => {
 
 console.log(News)
-console.log(News2)
+const News3 = axios.get('https://apitsn.vercel.app/api/news')
+  .then(function (response) {
+    console.log(response.data)
+    return response.data;
+  })
+console.log(News3)
 
 
   return (
