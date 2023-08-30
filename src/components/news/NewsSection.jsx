@@ -30,7 +30,7 @@ const NewsSection = ( ) => {
             <React.Fragment key={e._id} >
               <Card 
                 key={e._id} 
-                id={index} 
+                id={e._id} 
                 title={e.title} 
                 paragraph={e.paragraph} 
                 img={e.img}
