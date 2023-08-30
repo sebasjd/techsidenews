@@ -13,8 +13,8 @@ const NewsSection =  async ( ) => {
     axios.get('https://apitsn.vercel.app/api/news')
     .then((response) => {
       setNews(response.data)
-    }, [])
-  })
+    })
+  }, [])
 
 
 
