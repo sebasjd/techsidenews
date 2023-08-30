@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container } from '../../styles/NewsContainer'
 import { Advertisement } from '../../styles/Advertisement'
 import { News, News2 } from '../../utils/Data'
 import Card from './Card'
 import { Advertisements } from '../../utils/Advertisements'
+import axios from 'axios'
 
 const NewsSection =  async ( ) => {
+
+  const [news, setNews] = useState([])
+  useEffect (() => {
+    axios.get('https://apitsn.vercel.app/api/news')
+    .then((response) => {
+      setNews(response.data)
+    }, [])
+  })
+
+
 
     return (
     <>
       <Container>
-        {await News2.map( e =>{
+        {news.map( e =>{
           return (
             <React.Fragment key={e.key} >
               <Card 
