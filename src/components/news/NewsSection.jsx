@@ -1,27 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Container } from '../../styles/NewsContainer'
 import { Advertisement } from '../../styles/Advertisement'
 import { News, News2 } from '../../utils/Data'
 import Card from './Card'
 import { Advertisements } from '../../utils/Advertisements'
 import axios from 'axios';
+import { Context } from '../../utils/Context'
 
 const NewsSection = ( ) => {
 
-  const [news, setNews] = useState([]);
+  // const [news, setNews] = useState([]);
 
-  useEffect(() => {
-    // Realiza la solicitud a la API cuando el componente se monta
-    axios
-      .get('https://apitsn.vercel.app/api/news')
-      .then((response) => {
-        setNews(response.data);
-        console.log(response.data)
-      })
-      .catch((error) => {
-        console.error('Error al obtener noticias:', error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Realiza la solicitud a la API cuando el componente se monta
+  //   axios
+  //     .get('https://apitsn.vercel.app/api/news')
+  //     .then((response) => {
+  //       setNews(response.data);
+  //       console.log(response.data)
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error al obtener noticias:', error);
+  //     });
+  // }, []);
+
+  const { news } = useContext(Context)
 
     return (
     <>

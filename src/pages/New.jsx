@@ -5,36 +5,23 @@ import { Container } from '../styles/NewsContainer'
 import { News } from '../utils/Data'
 import { Back } from '../styles/New'
 import { ColorsCtx } from '../styles/Colors'
-import axios from 'axios'
+import { Context } from '../utils/Context'
 
 const New = () => {
-
-  const [news, setNews] = useState([]);
-
-  useEffect(() => {
-    // Realiza la solicitud a la API cuando el componente se monta
-    axios
-      .get('https://apitsn.vercel.app/api/news')
-      .then((response) => {
-        setNews(response.data);
-        console.log(response.data)
-      })
-      .catch((error) => {
-        console.error('Error al obtener noticias:', error);
-      });
-  }, []);
 
   const { PrimaryStrong, PrimaryLight, NoWhite, PrimaryDark } = useContext(ColorsCtx)
   const { id } = useParams();
   const navigate = useNavigate();
+
+  const { news } = useContext(Context)
 
   
     return (
       <>
         <Back color={PrimaryStrong} fds={PrimaryLight} hfds={NoWhite} mbgc={PrimaryDark} onClick={ () => navigate(-1) } />
         <Container>
-          {News.some( e => e.id === id) ?
-            News.map( e => e.id === id && 
+          {news.some( e => e._id === id) ?
+            news.map( e => e._id === id && 
               <NewSection 
                 key={e._id} 
                 id={e._id} 
