@@ -8,7 +8,11 @@ import { Advertisements } from '../../utils/Advertisements'
 const NewsSection = ( ) => {
 
 console.log(News)
-console.log(News2)
+const data = async () => {
+  await News2
+  return News2
+}
+console.log(data)
 
   return (
     <>
