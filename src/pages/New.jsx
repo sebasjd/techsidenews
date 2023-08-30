@@ -25,16 +25,16 @@ const New = () => {
   }, []);
 
   const { PrimaryStrong, PrimaryLight, NoWhite, PrimaryDark } = useContext(ColorsCtx)
-  const { title } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
- 
+
   
     return (
       <>
         <Back color={PrimaryStrong} fds={PrimaryLight} hfds={NoWhite} mbgc={PrimaryDark} onClick={ () => navigate(-1) } />
         <Container>
-          {news.some( e => e.title === title) ?
-            news.map( e => e.title === title && 
+          {News.some( e => e.id === id) ?
+            News.map( e => e.id === id && 
               <NewSection 
                 key={e._id} 
                 id={e._id} 
