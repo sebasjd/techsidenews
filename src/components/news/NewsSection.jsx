@@ -25,20 +25,20 @@ const NewsSection = ( ) => {
     return (
     <>
       <Container>
-        {news.map( e =>{
+        {news.map( (e, index) =>{
           return (
             <React.Fragment key={e._id} >
               <Card 
                 key={e._id} 
-                id={e.index} 
+                id={index} 
                 title={e.title} 
                 paragraph={e.paragraph} 
                 img={e.img}
               />
               {e.index % 6 === 0 && <Advertisement
-                key={Advertisements[e.index/6].id}
-                img={Advertisements[e.index/6].imgLarge} 
-                imgShort={Advertisements[e.index/6].imgShort} 
+                key={Advertisements[index/6].id}
+                img={Advertisements[index/6].imgLarge} 
+                imgShort={Advertisements[index/6].imgShort} 
               />}
             </React.Fragment> 
           )}
