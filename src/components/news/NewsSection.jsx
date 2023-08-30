@@ -27,10 +27,10 @@ const NewsSection = ( ) => {
       <Container>
         {news.map( e =>{
           return (
-            <React.Fragment key={e.key} >
+            <React.Fragment key={e._id} >
               <Card 
-                key={e.key} 
-                id={e.key} 
+                key={e._id} 
+                id={e._id} 
                 title={e.title} 
                 paragraph={e.paragraph} 
                 img={e.img}
