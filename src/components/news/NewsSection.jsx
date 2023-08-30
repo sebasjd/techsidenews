@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container } from '../../styles/NewsContainer'
 import { Advertisement } from '../../styles/Advertisement'
 import { News, News2 } from '../../utils/Data'
