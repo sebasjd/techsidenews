@@ -7,12 +7,12 @@ import { Advertisements } from '../../utils/Advertisements'
 
 const NewsSection = ( ) => {
 
-
+  const data = News
 
   return (
     <>
       <Container>
-        {News.map( e =>{
+        {data.map( e =>{
           return (
             <React.Fragment key={e.key} >
               <Card 
