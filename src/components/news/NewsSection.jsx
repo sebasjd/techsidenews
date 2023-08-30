@@ -1,18 +1,19 @@
 import React from 'react'
 import { Container } from '../../styles/NewsContainer'
 import { Advertisement } from '../../styles/Advertisement'
-import { News } from '../../utils/Data'
+import { News, News2 } from '../../utils/Data'
 import Card from './Card'
 import { Advertisements } from '../../utils/Advertisements'
 
 const NewsSection = ( ) => {
 
-  const data = News
+console.log(News)
+console.log(News2)
 
   return (
     <>
       <Container>
-        {data.map( e =>{
+        {News.map( e =>{
           return (
             <React.Fragment key={e.key} >
               <Card 
