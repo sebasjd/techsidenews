@@ -10,7 +10,7 @@ const NewsSection =  ( ) => {
 
   axios.get('https://apitsn.vercel.app/api/news')
   .then(function (response) {
-    News3 = response.data
+  const News3 = response.data
 console.log(News3)
     return (
     <>
