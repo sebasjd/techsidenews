@@ -5,10 +5,10 @@ import { News, News2 } from '../../utils/Data'
 import Card from './Card'
 import { Advertisements } from '../../utils/Advertisements'
 
-const NewsSection = async ( ) => {
+const NewsSection = ( ) => {
 
 console.log(News)
-await console.log(News2)
+console.log(News2)
 
 
   return (
