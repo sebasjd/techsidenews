@@ -16,11 +16,11 @@ const New = () => {
       <>
         <Back color={PrimaryStrong} fds={PrimaryLight} hfds={NoWhite} mbgc={PrimaryDark} onClick={ () => navigate(-1) } />
         <Container>
-          {News.some( e => e.key === id) ?
-            News.map( e => e.key === id && 
+          {News.some( e => e._id === id) ?
+            News.map( e => e._id === id && 
               <NewSection 
-                key={e.key} 
-                id={e.key} 
+                key={e._id} 
+                id={e._id} 
                 title={e.title} 
                 text={e.text} 
                 img={e.img}
