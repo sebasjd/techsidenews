@@ -8,16 +8,11 @@ import axios from 'axios'
 
 const NewsSection =  ( ) => {
 
-console.log(News)
-const News3 = axios.get('https://apitsn.vercel.app/api/news')
+  axios.get('https://apitsn.vercel.app/api/news')
   .then(function (response) {
-    console.log(response.data)
-    return response.data;
-  })
+    News3 = response.data
 console.log(News3)
-
-
-  return (
+    return (
     <>
       <Container>
         {News.map( e =>{
@@ -42,5 +37,6 @@ console.log(News3)
     </>
   )
 }
+)}
 
 export default NewsSection
