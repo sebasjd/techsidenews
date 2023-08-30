@@ -4,13 +4,16 @@ import { Advertisement } from '../../styles/Advertisement'
 import { News, News2 } from '../../utils/Data'
 import Card from './Card'
 import { Advertisements } from '../../utils/Advertisements'
+import axios from 'axios'
 
 const NewsSection =  ( ) => {
 
     return (
     <>
       <Container>
-        {News.map( e =>{
+        { axios.get('https://apitsn.vercel.app/api/news')
+  .then(function (response) {
+        response.data.map( e =>{
           return (
             <React.Fragment key={e.key} >
               <Card 
@@ -26,7 +29,7 @@ const NewsSection =  ( ) => {
                 imgShort={Advertisements[e.key/6].imgShort} 
               />}
             </React.Fragment> 
-          )}
+          )}  )}
         )}
       </Container>
     </>
