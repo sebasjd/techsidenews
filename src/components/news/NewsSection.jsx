@@ -16,6 +16,7 @@ const NewsSection = ( ) => {
       .get('https://apitsn.vercel.app/api/news')
       .then((response) => {
         setNews(response.data);
+        console.log(response.data)
       })
       .catch((error) => {
         console.error('Error al obtener noticias:', error);
