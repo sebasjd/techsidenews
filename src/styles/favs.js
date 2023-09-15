@@ -48,14 +48,14 @@ export const Container = styled.div`
   z-index: 2;
   color: ${props=>props.color};
   gap: 5px;
-  animation: ${props=>props.menuState? OpenDesk : CloseDesk} .3s ease-in-out forwards;
-  /* animation: ${props=>props.menuState? CloseDesk : OpenDesk} .3s ease-in-out forwards; */
+  animation: ${props=>props.favState? OpenDesk : CloseDesk} .3s ease-in-out forwards;
+  /* animation: ${props=>props.favState? CloseDesk : OpenDesk} .3s ease-in-out forwards; */
 
   @media (max-width: 480px){
     top: 50px;
     width: 100%;
-    animation: ${props=>props.menuState? OpenMobile : CloseMobile} .3s ease-in-out forwards;
-    /* animation: ${props=>props.menuState? CloseMobile : OpenMobile} .3s ease-in-out forwards; */
+    animation: ${props=>props.favState? OpenMobile : CloseMobile} .3s ease-in-out forwards;
+    /* animation: ${props=>props.favState? CloseMobile : OpenMobile} .3s ease-in-out forwards; */
   }
 `
 export const CloseButton = styled.div`

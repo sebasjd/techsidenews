@@ -6,6 +6,7 @@ export const Context = createContext();
 export const ContextProvider = ({ children }) => {
 
   const [menuState, setMenuState] = useState(false)
+  const [favState, setFavState] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [isLogin, setIsLogin] = useState(false);
   const [news, setNews] = useState([]);
@@ -28,6 +29,8 @@ export const ContextProvider = ({ children }) => {
     value= {{
       menuState: menuState,
       setMenuState: setMenuState,
+      favState: favState,
+      setFavState: setFavState,
       showModal: showModal,
       setShowModal: setShowModal,
       isLogin: isLogin,

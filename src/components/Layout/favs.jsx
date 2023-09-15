@@ -6,11 +6,11 @@ import { Container } from '../../styles/favs'
 export default function Favs() {
 
   const { PrimaryStrong, NoBlack} = useContext(ColorsCtx)
-  const {menuState, setMenuState} = useContext(Context)
+  const {favState, setFavState} = useContext(Context)
 
   useEffect(() => {
     const handleKeydown = (e) => {
-      e.key === "Escape" && setMenuState(false)
+      e.key === "Escape" && setFavState(false)
     }
     document.addEventListener("keydown", handleKeydown);
 
@@ -24,7 +24,7 @@ export default function Favs() {
 
 
     <>
-      <Container show={menuState} bgc={NoBlack} color={PrimaryStrong} menuState={menuState}> 
+      <Container show={favState} bgc={NoBlack} color={PrimaryStrong} favState={favState}> 
 
         Lista de favoritos
 

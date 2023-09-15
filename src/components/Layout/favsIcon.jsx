@@ -9,9 +9,12 @@ import { useContext } from 'react'
 const FavIcon = () => {
 
   const { PrimaryDark, PrimaryLight } = useContext(ColorsCtx)
+
+  const {favState, setFavState} = useContext(Context)
+
   return (
     <>
-      <FavsIcon mbgc={PrimaryDark} fds={PrimaryLight}> 
+      <FavsIcon onClick={() => setFavState(!favState)} mbgc={PrimaryDark} fds={PrimaryLight}> 
         <AiOutlineStar />
       </FavsIcon>
     </>
