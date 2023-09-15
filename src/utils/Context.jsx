@@ -11,7 +11,7 @@ export const ContextProvider = ({ children }) => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    // Realiza la solicitud a la API cuando el componente se monta
+    // Realiza la solicitud a la API cuando se monta la app
     axios
       .get('https://apitsn.vercel.app/api/news')
       .then((response) => {
