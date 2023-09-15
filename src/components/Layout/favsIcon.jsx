@@ -2,6 +2,7 @@ import {AiOutlineStar} from 'react-icons/ai'
 import { FavsIcon } from '../../styles/favsIcon'
 import { ColorsCtx } from '../../styles/Colors'
 import { useContext } from 'react'
+import { Context } from '../../utils/Context'
 
 
 
