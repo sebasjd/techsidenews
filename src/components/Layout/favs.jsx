@@ -26,7 +26,7 @@ export default function Favs() {
     <>
       <Container show={favState} bgc={NoBlack} color={PrimaryStrong} favState={favState}> 
 
-        Lista de favoritos
+      In the near future, by logging in, you will be able to see your list of favorites.
 
       </Container>
 
