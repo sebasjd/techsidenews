@@ -5,9 +5,9 @@ display: flex;
 position: fixed;
 z-index: 1;
 color: yellow;
-right: 30px;
-font-size: 40px;
-top: 10px;
+left: 30px;
+font-size: 38px;
+top: 50px;
 filter: drop-shadow(0 0px 2px white);
 cursor: pointer;
 
