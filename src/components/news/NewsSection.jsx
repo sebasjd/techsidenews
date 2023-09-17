@@ -23,7 +23,7 @@ const NewsSection = ( ) => {
                 paragraph={e.paragraph} 
                 img={e.img}
               />
-              {index === 5 || (index > 0 && (index - 5) % 6 === 0) && <Advertisement
+              {(index === 5 || (index > 0 && (index % 6 === 0))) && <Advertisement
                 key={Advertisements[index/6].id}
                 img={Advertisements[index/6].imgLarge} 
                 imgShort={Advertisements[index/6].imgShort} 
