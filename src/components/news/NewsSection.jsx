@@ -24,9 +24,9 @@ const NewsSection = ( ) => {
                 img={e.img}
               />
               {(index > 0 && (index % 5 === 0)) && <Advertisement
-                key={Advertisements[(index+1)/6].id}
-                img={Advertisements[(index+1)/6].imgLarge} 
-                imgShort={Advertisements[(index+1)/6].imgShort} 
+                key={Advertisements[(index)/6].id}
+                img={Advertisements[(index)/6].imgLarge} 
+                imgShort={Advertisements[(index)/6].imgShort} 
               />}
             </React.Fragment> 
           )}
