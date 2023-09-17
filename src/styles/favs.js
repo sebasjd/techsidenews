@@ -63,7 +63,7 @@ export const CloseButton = styled.div`
   position: absolute;
   z-index: 1;
   color: ${props=>props.color};
-  font-size: 35px;
+  font-size: 30px;
   top: 10px;
   right: 20px;
   filter: drop-shadow(0 0px 2px ${props=>props.fds});
