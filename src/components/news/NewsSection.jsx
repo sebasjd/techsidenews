@@ -13,7 +13,7 @@ const NewsSection = ( ) => {
     return (
     <>
       <Container>
-        {news.map( (e, index) =>{
+        {news.map( (e, index) =>{ console.log(index, index+1)
           return (
             <React.Fragment key={e._id} >
               <Card 
