@@ -13,7 +13,7 @@ const NewsSection = ( ) => {
     return (
     <>
       <Container>
-        {news.map( (e, index) =>{ console.log(index, index+1)
+        {news.map( (e, index) =>{
           return (
             <React.Fragment key={e._id} >
               <Card 
@@ -24,9 +24,9 @@ const NewsSection = ( ) => {
                 img={e.img}
               />
               {(index > 0 && (index % 6 === 0 || index === 5)) && index !== 6 && <Advertisement
-                key={Advertisements[index/6].id}
-                img={Advertisements[index/6].imgLarge} 
-                imgShort={Advertisements[index/6].imgShort} 
+                key={Advertisements[index = (5? (index +1) : index) /6].id}
+                img={Advertisements[index = (5? (index +1) : index) /6].imgLarge} 
+                imgShort={Advertisements[index = (5? (index +1) : index) /6].imgShort} 
               />}
             </React.Fragment> 
           )}
