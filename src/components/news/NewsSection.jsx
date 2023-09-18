@@ -23,10 +23,10 @@ const NewsSection = ( ) => {
                 paragraph={e.paragraph} 
                 img={e.img}
               />
-              {(index > 0 && (index % 6 === 0 || index === 5)) && index !== 6 && <Advertisement
-                key={Advertisements[index = (5? (index +1) : index) /6].id}
-                img={Advertisements[index = (5? (index +1) : index) /6].imgLarge} 
-                imgShort={Advertisements[index = (5? (index +1) : index) /6].imgShort} 
+              {((index+1) % 6 === 0) && <Advertisement
+                key={Advertisements[(index+1)/6].id}
+                img={Advertisements[(index+1)/6].imgLarge} 
+                imgShort={Advertisements[(index+1)/6].imgShort} 
               />}
             </React.Fragment> 
           )}
